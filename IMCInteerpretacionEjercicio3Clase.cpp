@@ -22,8 +22,12 @@ string interpretacionIMC(double imc) {
 }
 
 int main() {
-    double peso, altura_m;
+	 double peso, altura_m;
+	 string opcion;
+	 
+	do{
 
+   opcion = "Si";
     // Solicitar al usuario el peso y la altura
     cout << "Ingrese su peso en kilogramos: ";
     cin >> peso;
@@ -39,7 +43,13 @@ int main() {
     // Mostrar el resultado
     cout << "Su IMC es: " << imc << endl;
     cout << "Interpretación: " << interpretacion << endl;
-
+    	
+	cout << "Quieres continuar? escribe NO en mayusculas para salir ";
+   	cin >> opcion;
+ 
+}while(opcion != "NO");
+    cout << "Adios";
     return 0;
+
 }
 

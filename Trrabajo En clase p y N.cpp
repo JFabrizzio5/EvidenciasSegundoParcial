@@ -10,7 +10,11 @@ char esPar(int numero) {
 }
 
 int main() {
-    int numero;
+    int numero;	 
+	string opcion;
+	opcion = "Si";
+	do{
+
 
     // Solicitar al usuario que ingrese un número
     cout << "Ingresa un número entero: ";
@@ -27,7 +31,11 @@ int main() {
         cout << "impar ";
     }
     cout << "(resultado: " << resultado << ")" << endl;
-
+    
+	cout << "Quieres continuar? escribe NO en mayusculas para salir ";
+   	cin >> opcion;
+	}while(opcion != "NO");
+	cout << "Adios";
     return 0;
 }
 
