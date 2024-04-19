@@ -1,25 +1,32 @@
 #include <iostream>
-//Hernandez Gonzalez Joseph Fabrizzio 1CV11
 using namespace std;
 
-// Funci?n para determinar si un n?mero es par o impar
-bool esPar(int numero) {
-    return numero % 2 == 0;
+char esPar(int numero) {
+    if (numero % 2 == 0) {
+        return 'P'; // Retorna 'P' si es par
+    } else {
+        return 'N'; // Retorna 'N' si es impar
+    }
 }
 
 int main() {
     int numero;
 
-    // Solicitar al usuario que ingrese un n?mero
-    cout << "Ingresa un n?mero entero: ";
+    // Solicitar al usuario que ingrese un número
+    cout << "Ingresa un número entero: ";
     cin >> numero;
 
-    // Verificar si el n?mero es par o impar utilizando la funci?n esPar
-    if (esPar(numero)) {
-        cout << numero << " es p. par" << endl;
+    // Verificar si el número es par o impar utilizando la función esPar
+    char resultado = esPar(numero);
+    
+    // Imprimir el resultado
+    cout << "El número " << numero << " es ";
+    if (resultado == 'P') {
+        cout << "par ";
     } else {
-        cout << numero << " es n non" << endl;
+        cout << "impar ";
     }
+    cout << "(resultado: " << resultado << ")" << endl;
 
     return 0;
 }
